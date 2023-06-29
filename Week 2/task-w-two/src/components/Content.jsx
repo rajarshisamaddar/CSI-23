@@ -4,7 +4,12 @@ import ImageUtil from "./ImageUtil";
 function Content() {
   return (
     <div className="p-4">
-      <h1>Heading 1</h1>
+      <h1>
+        H1 - React Front Page,{" "}
+        <b>
+          <mark>Week 2 at Celebal Tech Work by Rajarshi Samaddar</mark>
+        </b>
+      </h1>
       <p>
         Nostrud amet excepteur non esse ea enim ipsum aliqua tempor occaecat.
         Velit consequat consequat ipsum labore mollit eiusmod ea non esse quis
@@ -27,7 +32,9 @@ function Content() {
         aute qui Lorem excepteur ut aute sint consequat nostrud quis.
         Adipisicing mollit ex officia aute voluptate cillum.
       </p>
-      <h2>Heading 2</h2>
+      <h2>
+        H2 - React Front Page, Week 2 at Celebal Tech by Rajarshi Samaddar
+      </h2>
       <p>
         Nostrud amet excepteur non esse ea enim ipsum aliqua tempor occaecat.
         Velit consequat consequat ipsum labore mollit eiusmod ea non esse quis
@@ -114,7 +121,7 @@ function Content() {
         aute qui Lorem excepteur ut aute sint consequat nostrud quis.
         Adipisicing mollit ex officia aute voluptate cillum.
       </p>
-      <h3>Heading 3 - React vs AngularJS Comparison</h3>
+      <h3>H3 - React vs AngularJS Comparison</h3>
       <p>
         Nostrud amet excepteur non esse ea enim ipsum aliqua tempor occaecat.
         Velit consequat consequat ipsum labore mollit eiusmod ea non esse quis
@@ -187,7 +194,9 @@ function Content() {
         aute qui Lorem excepteur ut aute sint consequat nostrud quis.
         Adipisicing mollit ex officia aute voluptate cillum.
       </p>
-      <h4>Heading 4</h4>
+      <h4>
+        H4 - React Front Page, Week 2 at Celebal Tech by Rajarshi Samaddar
+      </h4>
       <p>
         Nostrud amet excepteur non esse ea enim ipsum aliqua tempor occaecat.
         Velit consequat consequat ipsum labore mollit eiusmod ea non esse quis

@@ -7,6 +7,9 @@ function App() {
     stream: "CSE",
     college: "Techno Engineering College",
   };
+  let cb = () => {
+    console.log(45);
+  };
   return (
     <>
       <DemoProps dataProps={studentData} />
