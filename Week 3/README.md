@@ -15,5 +15,6 @@
 11. Understanding context and its practical application. ✅
 12. The basic life cycle of the UseContext API. ✅
 13. Introduction to SetInterval and Syntax. ✅
+14. Learned lifting the state up in react. ✅
 
 #### © to [Rajarshi Samaddar](https://www.linkedin.com/in/rajarshisamaddar/)

@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import ChildA from "./ChildA";
+import ChildB from "./ChildB";
+import { useState, createContext } from "react";
+
+export const MyContext = createContext(null);
 
 function App() {
+  const [color, setColor] = useState("red");
+
+  let data = { fname: "Rajarshi", lname: "Samaddar" };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MyContext.Provider value={{ color, setColor }}>
+        <ChildA x={data} />
+        {/* <h1>Parent {color}</h1> */}
+        {/* <ChildB x={color} setx={setColor} /> */}
+        <ChildB />
+      </MyContext.Provider>
     </div>
   );
 }
