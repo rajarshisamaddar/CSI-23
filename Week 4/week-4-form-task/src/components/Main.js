@@ -16,6 +16,7 @@ import {
   Card,
   CardMedia,
   Modal,
+  Alert,
 } from "@mui/material";
 
 import Header from "./Header";
@@ -109,6 +110,9 @@ function Main() {
           open={open}
           onClose={() => {
             setOpen(false);
+            alert(
+              "✅ Your order has been successfully placed, ↘️ OK to continue."
+            );
             window.location.reload();
           }}
           aria-labelledby="modal-modal-title"
@@ -121,12 +125,12 @@ function Main() {
               left: "50%",
               transform: "translate(-50%, -50%)",
               bgcolor: "#ffffff",
+              border: "2px solid #1565c0",
               boxShadow: 24,
               p: 4,
               color: "#000000",
             }}
-            md={{ width: "40%" }}
-            sm={{ width: "80%" }}
+            width={{ xs: "60%", sm: "60%", md: "40%" }}
           >
             <Typography
               id="modal-modal-title"
@@ -177,6 +181,7 @@ function Main() {
           textAlign="center"
           color={"#e65100"}
           fontWeight={"bold"}
+          mx={{ xs: "8px", sm: "8px" }}
         >
           Order Xpress V23
         </Typography>
@@ -187,26 +192,87 @@ function Main() {
           variant="p"
           component="p"
           textAlign="center"
+          mx={{ xs: "20px", sm: "20px" }}
         >
           Order Express V23 is a dynamic and efficient web application designed
           to simplify the ordering process for small businesses with a limited
-          range of items. Powered by REACT and MUI, Order Express 23 streamlines
+          range of items. Powered by REACT and MUI, Order Express V23 streamlines
           order management, ensuring quick and hassle-free transactions.
         </Typography>
 
         {data.item !== "" && (
-          <Box mt={6}>
-            <Card sx={{ maxWidth: 300, margin: "auto" }}>
-              <CardMedia
-                sx={{ height: 250 }}
-                image={data.media}
-                title={data.item}
-              />
-              <CardContent>
-                <Typography variant="h5" component="div" textAlign={"center"}>
-                  {data.item} - U{data.quantity} - ₹{data.totalAmount}
-                </Typography>
-              </CardContent>
+          <Box container mt={6}>
+            <Card
+              sx={{ marginLeft: "15%", marginRight: "15", width: "70%" }}
+              elevation={4}
+              xs={{ width: "75%" }}
+              sm={{ width: "75%" }}
+              md={{ width: "50%" }}
+            >
+              <Grid container spacing={0}>
+                <Grid item xs={12} sm={12} md={7}>
+                  <Box
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <CardMedia
+                      sx={{ height: 250, width: 250, margin: 4 }}
+                      image={data.media}
+                      title={data.item}
+                      // md={{ height: 250 }}
+                      alignItems={"center"}
+                    />
+                  </Box>
+                </Grid>
+
+                <Grid item xs={12} sm={12} md={5}>
+                  <Box
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <CardContent>
+                      <Typography
+                        variant="h5"
+                        component="div"
+                        textAlign={"left"}
+                        sx={{ margin: 4 }}
+                        lineHeight={1.6}
+                      >
+                        <span style={{ color: "#1565c0" }}>
+                          <b>{data.item}</b>
+                        </span>
+                        <br />
+                        <b
+                          style={{
+                            backgroundColor: "#e65100",
+                            color: "#ffffff",
+                            padding: "4px",
+                            borderRadius: "7px",
+                          }}
+                        >
+                          DEAL
+                        </b>
+                        <br />
+                        MRP -{"  "}
+                        <span
+                          style={{
+                            textDecorationLine: "line-through",
+                            textDecorationStyle: "solid",
+                            textDecorationColor: "#e65100",
+                          }}
+                        >
+                          {data.itemPrice * 2}
+                        </span>
+                        <br />
+                        <b>₹{data.totalAmount}</b>
+                        <br /> 50% OFF
+                      </Typography>
+                    </CardContent>
+                  </Box>
+                </Grid>
+              </Grid>
             </Card>
           </Box>
         )}

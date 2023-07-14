@@ -13,6 +13,7 @@ export default function Foot() {
         variant="p"
         component="p"
         textAlign="center"
+        mx={{ xs: "20px", sm: "20px" }}
       >
         By using the Order Express V23 platform, you agree to abide by the
         following terms and conditions. The platform is provided for the purpose
@@ -35,6 +36,7 @@ export default function Foot() {
           variant={{ xs: "body2", sm: "body2", md: "h6" }}
           align="center"
           sx={{ color: "#ffffff" }}
+          mx={{ xs: "20px", sm: "20px" }}
         >
           Order Xpress V23 |{" Copyright © "}
           <Link
