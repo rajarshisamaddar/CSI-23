@@ -4,7 +4,6 @@ import { Movie, MovieDetailsResult, MovieID, MovieListResult } from './types';
 const BASE_API_URL = '//api.themoviedb.org/3/';
 const BASE_IMG_API = '//image.tmdb.org/t/p/';
 
-// api key is stored here for the simplicity purposes
 const API_KEY = '6ca142da9f18445499c52d9340cd8b3f';
 
 type QueryStringParams = { [key: string]: string | number };
